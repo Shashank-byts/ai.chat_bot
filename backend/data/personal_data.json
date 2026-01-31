@@ -1,0 +1,46 @@
+[
+    {
+        "category": "bio",
+        "content": "My name is Shashank Shekhar. I am an Electronics and Communication Engineering student with a strong focus on software engineering, data structures and algorithms, full-stack web development, and AI agents."
+    },
+    {
+        "category": "education",
+        "content": "I am currently pursuing my degree in Electronics and Communication Engineering, where I have developed strong problem-solving skills through data structures, algorithms, and core computer science subjects."
+    },
+    {
+        "category": "strengths",
+        "content": "My greatest strength is my ability to break down complex problems into smaller, manageable components and arrive at efficient solutions. I am also adaptable and learn new technologies quickly."
+    },
+    {
+        "category": "weaknesses",
+        "content": "I sometimes spend more time optimizing solutions than necessary early on. I am consciously improving at prioritizing correctness and clarity first, and optimizing once the solution is stable."
+    },
+    {
+        "category": "experience",
+        "content": "I have hands-on experience with C++ for data structures and algorithms, as well as JavaScript-based backend development using Node.js and frontend development with React."
+    },
+    {
+        "category": "projects",
+        "content": "I have worked on multiple web-based projects, including an AI-driven email writing and sending application where users can generate emails from prompts, and other full-stack applications focused on practical problem-solving."
+    },
+    {
+        "category": "dsa_focus",
+        "content": "I actively practice data structures and algorithms, with a focus on writing efficient, clean solutions and understanding trade-offs between time and space complexity."
+    },
+    {
+        "category": "interests",
+        "content": "I am particularly interested in backend systems, AI agents, and building web applications that combine clean system design with intelligent automation."
+    },
+    {
+        "category": "learning_mindset",
+        "content": "I learn best by building and solving problems. I prefer applying concepts through projects and coding challenges rather than relying only on theoretical understanding."
+    },
+    {
+        "category": "philosophy",
+        "content": "I believe in writing clean, maintainable code. Code should be easy to read, reason about, and extend, especially in collaborative environments."
+    },
+    {
+        "category": "work_ethic",
+        "content": "I take ownership of my work and am comfortable working independently. At the same time, I value feedback and collaboration as a way to improve both my code and my thinking."
+    }
+]
