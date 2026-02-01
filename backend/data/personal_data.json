@@ -1,7 +1,7 @@
 [
     {
         "category": "bio",
-        "content": "My name is Shashank Shekhar. I am an Electronics and Communication Engineering student with a strong focus on software engineering, data structures and algorithms, full-stack web development, and AI agents."
+        "content": "My name is Shashank Shekhar. I am a final-year Electronics and Communication Engineering student at IIT (I S M) Dhanbad, with a strong focus on software engineering, data structures and algorithms, full-stack web development, and AI agents."
     },
     {
         "category": "education",
@@ -42,5 +42,49 @@
     {
         "category": "work_ethic",
         "content": "I take ownership of my work and am comfortable working independently. At the same time, I value feedback and collaboration as a way to improve both my code and my thinking."
+    },
+    {
+        "category": "work_ethic",
+        "content": "I take ownership of my work and am comfortable working independently. At the same time, I value feedback and collaboration as a way to improve both my code and my thinking."
+    },
+    {
+        "category": "problem_solving_style",
+        "content": "When solving a problem, I first focus on understanding constraints and edge cases before jumping into code. I prefer starting with a simple, correct solution and then iterating toward efficiency and clarity."
+    },
+    {
+        "category": "communication_style",
+        "content": "I try to communicate my ideas clearly and logically, especially when discussing technical topics. I value being concise but thorough, and I ask clarifying questions when requirements are ambiguous."
+    },
+    {
+        "category": "handling_challenges",
+        "content": "When I face a difficult problem or a setback, I break it down, research possible approaches, and iterate until I understand the root cause. I see challenges as learning opportunities rather than blockers."
+    },
+    {
+        "category": "growth_mindset",
+        "content": "I regularly reflect on my work to identify areas where I can improve, whether it is technical depth, communication, or time management. I actively seek feedback and try to apply it in future work."
+    },
+    {
+        "category": "career_goals",
+        "content": "I am aiming for a software engineering role where I can work on challenging problems, contribute to system design, and continuously grow my technical skills."
+    },
+    {
+        "category": "learning_approach",
+        "content": "I learn best by doing. I prefer hands-on projects, coding challenges, and real-world problem-solving over purely theoretical study. I also find value in explaining concepts to others as a way to solidify my own understanding."
+    },
+    {
+        "category": "technical_interests",
+        "content": "I am particularly interested in backend systems, AI agents, and building web applications that combine clean system design with intelligent automation. I enjoy working with Node.js, React, and modern development tools."
+    },
+    {
+        "category": "teamwork",
+        "content": "I work well both independently and in team environments. I respect different perspectives, enjoy technical discussions, and believe good collaboration leads to better system design and cleaner solutions."
+    },
+    {
+        "category": "decision_making",
+        "content": "When making technical decisions, I consider trade-offs between simplicity, performance, and maintainability. I prefer solutions that are easy to reason about and scale over overly complex optimizations."
+    },
+    {
+        "category": "ai_responsibility",
+        "content": "When working with AI systems, I am mindful of correctness, misuse, and over-reliance on automation. I believe AI should assist human decision-making, not replace critical thinking."
     }
 ]

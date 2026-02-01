@@ -4,6 +4,40 @@ const introOverlay = document.getElementById('intro-overlay');
 const startBtn = document.getElementById('start-btn');
 const pulseRing = document.getElementById('pulse-ring');
 
+let selectedVoice = null;
+// load voices
+function loadVoices() {
+    return new Promise((resolve) => {
+        const voices = window.speechSynthesis.getVoices();
+
+        if (voices.length > 0) {
+            resolve(voices);
+        } else {
+            window.speechSynthesis.onvoiceschanged = () => {
+                resolve(window.speechSynthesis.getVoices());
+            };
+        }
+    });
+}
+// initialize voice
+async function initVoice() {
+    statusText.textContent = "Loading voice...";
+
+    const voices = await loadVoices();
+
+    selectedVoice =
+        voices.find(v => v.name.includes("Google UK English Male")) ||
+        voices.find(v => v.name.includes("Google") && v.name.includes("Male")) ||
+        voices.find(v => v.name.includes("Google")) ||
+        voices[0];
+
+    console.log("Selected voice:", selectedVoice?.name);
+
+    statusText.textContent = "Voice ready";
+}
+
+
+
 // Speech Recognition Setup
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 let recognition;
@@ -48,15 +82,14 @@ if (SpeechRecognition) {
 // Speech Synthesis Setup
 function speak(text) {
     return new Promise((resolve) => {
-        // Cancel any ongoing speech
         window.speechSynthesis.cancel();
 
         const utterance = new SpeechSynthesisUtterance(text);
         utterance.lang = 'en-US';
-        // Try to pick a decent voice - grounded male voice if possible
-        const voices = window.speechSynthesis.getVoices();
-        const preferredVoice = voices.find(v => v.name.includes('Google US English') || v.name.includes('Male')) || voices[0];
-        if (preferredVoice) utterance.voice = preferredVoice;
+
+        if (selectedVoice) {
+            utterance.voice = selectedVoice;
+        }
 
         utterance.onstart = () => {
             statusText.textContent = "Speaking...";
@@ -71,10 +104,11 @@ function speak(text) {
     });
 }
 
+
 // API Handler
 async function handleQuery(text) {
     try {
-        const response = await fetch('http://localhost:5000/api/ask', {
+        const response = await fetch('https://ai-chat-bot-7nh2.onrender.com/api/ask', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ question: text })
@@ -105,12 +139,14 @@ micBtn.addEventListener('click', () => {
     }
 });
 
-startBtn.addEventListener('click', () => {
+startBtn.addEventListener('click', async () => {
     introOverlay.style.display = 'none';
-    // Initialize synthesis voices (sometimes they need a trigger)
-    window.speechSynthesis.getVoices();
 
-    // Play Intro
-    const introText = "Hi, I’m Shashank Shekhar. This voice bot answers interview questions the way I would. Click the microphone button to begin.";
+    await initVoice();   // ⏳ waits until browser voices are ready
+
+    const introText =
+        "Hi, I’m Shashank Shekhar. This voice bot answers questions the way I would. Click the microphone button to begin.";
+
     speak(introText);
 });
+
